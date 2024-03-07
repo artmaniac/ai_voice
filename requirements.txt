@@ -1,3 +1,6 @@
 transformers
+torch
+tensorflow
+pillow
 langchain
 streamlit
