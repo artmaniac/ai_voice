@@ -19,7 +19,7 @@ import os
 # .env 파일에서 API_KEY 가져오기
 api_key = os.environ.get("API_KEY")
 
-image_text = img2txt( " llama2.png")
+image_text = img2txt( "llama2.png")
 
 # 텍스트를 기반으로 이야기 생성
 def story_making(context):
