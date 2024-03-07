@@ -19,7 +19,15 @@ import os
 # .env 파일에서 API_KEY 가져오기
 api_key = os.environ.get("API_KEY")
 
-image_text = img2txt("img.png")
+
+def img2txt(path):
+    pipe = pipeline("image-to-text", model="Salesforce/blip-image-captioning-large")
+    text = pipe(path)
+    print(text)
+    return text
+
+#image_text = img2txt("img.png")
+img2txt("img.png")
 
 # 텍스트를 기반으로 이야기 생성
 def story_making(context):
